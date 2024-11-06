@@ -1,9 +1,10 @@
+@use 'sass:color';
 // stylelint-disable scss/dollar-variable-default
 
 // Local docs variables
 $bd-purple:        #563d7c;
-$bd-purple-bright: lighten(saturate($bd-purple, 5%), 15%);
-$bd-purple-light:  lighten(saturate($bd-purple, 5%), 45%);
+$bd-purple-bright: color.adjust(color.adjust($bd-purple, $saturation: 5%), $lightness: 15%);
+$bd-purple-light:  color.adjust(color.adjust($bd-purple, $saturation: 5%), $lightness: 45%);
 $bd-dark:          #2a2730;
 $bd-download:      #ffe484;
 $bd-info:          #5bc0de;
